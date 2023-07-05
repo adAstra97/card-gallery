@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   font-family: 'Muli', sans-serif;
+   background: rgb(7,18,115);
+   background: linear-gradient(148deg, rgba(7,18,115,1) 0%, rgba(0,0,0,1) 100%);
+   overflow: hidden;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.slider {
+   width: 100%;
+   display: flex;
+   padding: 0 20px;
+}
+
+.slide {
+   height: 80vh;
+   margin: 10px;
+   border-radius: 20px;
+   cursor: pointer;
+   color: #fff;
+   flex: 1;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: relative;
+   transition: all 600ms ease-in-out;
+}
+
+.slide-1 {
+   background-image: url('https://images.unsplash.com/photo-1496196614460-48988a57fccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');
+}
+.slide-2 {
+   background-image: url('https://images.unsplash.com/photo-1557324815-5abd1c66ccfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+}
+.slide-3 {
+   background-image: url('https://images.unsplash.com/photo-1613779907266-f85db34edae5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1156&q=80');
+}
+.slide-4 {
+   background-image: url('https://images.unsplash.com/photo-1471357674240-e1a485acb3e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80');
+}
+.slide-5 {
+   background-image: url('https://images.unsplash.com/photo-1580133748682-099a97d17e6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+}
+
+.slide h3 {
+   position: absolute;
+   font-size: 7vw;
+   bottom: 20px;
+   left: 20px;
+   opacity: 0;
+   user-select: none;
+}
+
+.slide.active {
+   flex: 10;
+}
+
+.slide.active h3 {
+   opacity: 1;
+   transition: opacity 0.3s ease-in-out 0.5s;
+   text-shadow: 5px -2px 3px rgb(0 0 0 / 42%);
+}
