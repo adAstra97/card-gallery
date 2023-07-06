@@ -1,10 +1,19 @@
-let slider = document.querySelector('.slider');
+function slidesPlugin(activeSlide = 2) {
 
-slider.addEventListener('click', (event) => {
-   if (!event.target.closest('.slide')) return;
+   let slider = document.querySelector('.slider');
+   let slides = document.querySelectorAll('.slide');
 
-   for (let i = 0; i < slider.children.length; i++) {
-      slider.children[i].classList.remove('active');
-   }
-   event.target.closest('.slide').classList.add('active');
-});
+   slides[activeSlide].classList.add('active');
+
+   slider.addEventListener('click', (event) => {
+      if (!event.target.closest('.slide')) return;
+
+      for (let i = 0; i < slider.children.length; i++) {
+         slider.children[i].classList.remove('active');
+      }
+      event.target.closest('.slide').classList.add('active');
+   });
+
+}
+
+slidesPlugin();
